@@ -45,6 +45,12 @@ Default parent pom with common settings (e.g. java file encoding) to be used by 
 		
 		<!-- https://github.com/codecentric/spring-boot-admin -->
 		<spring-boot-admin.version>1.5.0</spring-boot-admin.version>
+
+		<!-- because i had a weird case where all of a sudden, 
+			lombok 1.16.0 was apparently ignored by the maven compile,
+			and switching to 1.18.0 solved it
+		 -->
+		<lombok.version>1.18.0</lombok.version>
 	</properties>
 
 	<modules>
@@ -110,6 +116,12 @@ Default parent pom with common settings (e.g. java file encoding) to be used by 
 				<groupId>com.lowagie</groupId>
 				<artifactId>itext</artifactId>
 				<version>${itext.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 
             <!-- Thx for the two fonts to http://ansuz.sooke.bc.ca/page/fonts ^^ -->
