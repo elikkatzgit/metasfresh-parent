@@ -48,9 +48,14 @@ Default parent pom with common settings (e.g. java file encoding) to be used by 
 
 		<!-- because i had a weird case where all of a sudden, 
 			lombok 1.16.0 was apparently ignored by the maven compile,
-			and switching to 1.18.0 solved it
-		 -->
-		<lombok.version>1.18.0</lombok.version>
+			# About lombok 1.18.0
+			* switching to 1.18.0 seemed to solve it locally solved it, but on jenkins the issue remained.
+			* with 1.18.0 I had unit tests fail in webui-api. 
+			  Example de.metas.ui.web.view.ViewIdTests.test_ofViewIdString_NullWindowId:
+			  expected: de.metas.ui.web.view.ViewId<ViewId(windowId=5141428, viewId=5141428-B, parts=[5141428, B])> but was: de.metas.ui.web.view.ViewId<ViewId(windowId=5141428, viewId=5141428-B, parts=[5141428, B])>
+			  (note that the strings are equal)
+		-->
+		<lombok.version>1.16.22</lombok.version>
 	</properties>
 
 	<modules>
