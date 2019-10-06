@@ -8,6 +8,7 @@
 
 	<packaging>pom</packaging>
 
+	
 	<description>
 Default parent pom with common settings (e.g. java file encoding) to be used by all maven projects.
 	</description>
